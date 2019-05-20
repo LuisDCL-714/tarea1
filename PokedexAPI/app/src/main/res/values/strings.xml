@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">PokedexAPI</string>
+    <string name="textSelect">Selecciona el tipo de busqueda</string>
+    <string name="hintSearch">Buscar</string>
+    <string name="buttonSearch">Buscar</string>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <Spinner
@@ -29,9 +30,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:gravity="center"
         android:text="@string/textSelect"
         android:textSize="25sp"
-        android:gravity="center"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +48,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:hint="@string/hintSearch"
-        android:visibility="gone"
         app:counterEnabled="false"
         app:errorEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,8 +69,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@android:color/holo_green_light"
         android:text="@string/buttonSearch"
         android:visibility="gone"
+        android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputSearch" />
@@ -84,6 +87,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/colorScroll"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,55 +97,66 @@
         <LinearLayout
             android:layout_height="fill_parent"
             android:layout_width="fill_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp">
 
             <LinearLayout
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:layout_width="0dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/layoutLeft">
 
                 <TextView
                     android:id="@+id/textName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Nombre: Pikachu\n"/>
+                    tools:text="Nombre: Pikachu\n"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/textWeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Peso: 60 Kg\n"/>
+                    tools:text="Peso: 60 Kg\n"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/textHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Altura: 30 Cm\n"/>
+                    tools:text="Altura: 30 Cm\n"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/textAbilities"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Habilidades:\n- Impactrueno.\n- Cabezaso\n"/>
+                    tools:text="Habilidades:\n- Impactrueno.\n- Cabezaso\n"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/textTypes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Tipo:\n- Eléctrico\n"/>
+                    tools:text="Tipo:\n- Eléctrico\n"
+                    android:textColor="@android:color/black"/>
 
                 <TextView
                     android:id="@+id/textStats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    tools:text="Estadísticas:\n- Velocidad: 15%\n"/>
+                    tools:text="Estadísticas:\n- Velocidad: 15%\n"
+                    android:textColor="@android:color/black"/>
 
             </LinearLayout>
 
@@ -149,11 +164,73 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:layout_width="0dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/layoutRight">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titleImagePokemon"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/imagePokemon"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageFrontPokemon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        tools:srcCompat="@tools:sample/avatars[3]" />
+
+                    <ImageView
+                        android:id="@+id/imageBackPokemon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        tools:srcCompat="@tools:sample/avatars[2]" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titleImageShiny"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/imageShiny"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageFrontShiny"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        tools:srcCompat="@tools:sample/avatars[2]" />
+
+                    <ImageView
+                        android:id="@+id/imageBackShiny"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        tools:srcCompat="@tools:sample/avatars[3]" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

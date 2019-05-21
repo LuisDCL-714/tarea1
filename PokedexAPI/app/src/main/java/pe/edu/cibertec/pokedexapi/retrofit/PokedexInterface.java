@@ -1,5 +1,6 @@
 package pe.edu.cibertec.pokedexapi.retrofit;
 
+import pe.edu.cibertec.pokedexapi.Clases.Abilities;
 import pe.edu.cibertec.pokedexapi.Clases.Pokemon;
 import pe.edu.cibertec.pokedexapi.Clases.Types;
 import retrofit2.Call;
@@ -12,4 +13,7 @@ public interface PokedexInterface {
 
     @GET("{endpoint}/{name}")
     Call<Types> searchTypes(@Path("endpoint")String selected, @Path("name") String wrote);
+
+    @GET("{endpoint}/{name}")
+    Call<Abilities> searchAbilities(@Path("endpoint")String selected, @Path("name") String wrote);
 }

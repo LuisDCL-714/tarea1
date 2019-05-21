@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">PokedexAPI</string>
-    <string name="textSelect">Selecciona el tipo de busqueda</string>
+    <string name="textSelect">Selecciona el tipo de busqueda\n</string>
     <string name="hintSearch">Buscar</string>
     <string name="buttonSearch">Buscar</string>
+    <string name="titleImagePokemon">Versión Normal:</string>
+    <string name="titleImageShiny">Versión Shiny:</string>
 </resources>
